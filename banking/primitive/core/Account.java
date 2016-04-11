@@ -1,5 +1,6 @@
 package banking.primitive.core;
 
+import banking.interfaces.Asset;
 import banking.primitive.*;
 import javax.swing.JOptionPane;
 
