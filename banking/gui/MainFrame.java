@@ -1,7 +1,7 @@
 package banking.gui;
 
 import banking.interfaces.AAccount;
-import banking.server.AccountServer;
+import banking.server.IAccountServer;
 import banking.server.AccountServerFactory;
 
 import java.io.*;
@@ -14,7 +14,7 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 class MainFrame extends JFrame {
 
-	AccountServer	myServer;
+	IAccountServer	myServer;
 	Properties		props;
 	JLabel			typeLabel;
 	JLabel			nameLabel;

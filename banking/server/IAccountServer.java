@@ -4,7 +4,7 @@ import java.util.List;
 
 import banking.interfaces.AAccount;
 
-public interface AccountServer {
+public interface IAccountServer {
 
 	/** Create a new account object in the server.  Type is either
 		"Checking" or "Savings".  Throws IllegalArgumentException otherwise.

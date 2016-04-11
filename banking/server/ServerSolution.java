@@ -6,7 +6,7 @@ import java.io.*;
 import banking.interfaces.AAccount;
 import banking.primitive.core.*;
 
-class ServerSolution implements AccountServer {
+class ServerSolution implements IAccountServer {
 
 	static String fileName = "accounts.ser";
 

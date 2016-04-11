@@ -1,12 +1,11 @@
 package banking.interfaces;
 
-import banking.primitive.*;
 import banking.primitive.core.DepositParameter;
 
 import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
-public abstract class AAccount implements Asset
+public abstract class AAccount implements IAsset
 {
 	/*
 	 * CST316 ACTIVITY 1.4

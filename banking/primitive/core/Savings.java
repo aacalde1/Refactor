@@ -2,7 +2,7 @@ package banking.primitive.core;
 
 import banking.interfaces.AAccount;
 import banking.interfaces.IInterestBearing;
-import banking.primitive.*;
+
 
 @SuppressWarnings("serial")
 public class Savings extends AAccount implements IInterestBearing {

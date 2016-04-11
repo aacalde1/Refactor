@@ -8,7 +8,7 @@ import banking.primitive.core.Savings;
 class ServerTest {
 	public static void main(String args[]) {
 
-		AccountServer server = new AccountServerFactory().getAccountServer();
+		IAccountServer server = new AccountServerFactory().getAccountServer();
 		
 		List<AAccount> initialTest = server.getAllAccounts();
 		if (initialTest.size() > 0) {
