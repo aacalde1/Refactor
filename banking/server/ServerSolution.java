@@ -3,6 +3,7 @@ package banking.server;
 import java.util.*;
 import java.io.*;
 
+import banking.interfaces.Account;
 import banking.primitive.core.*;
 
 class ServerSolution implements AccountServer {

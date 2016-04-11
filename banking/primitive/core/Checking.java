@@ -1,5 +1,7 @@
 package banking.primitive.core;
 
+import banking.interfaces.Account;
+
 @SuppressWarnings("serial")
 public class Checking extends Account {
 	private int numWithdraws = 0;

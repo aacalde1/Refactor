@@ -1,5 +1,6 @@
 package banking.primitive.core;
 
+import banking.interfaces.Account;
 import banking.interfaces.InterestBearing;
 import banking.primitive.*;
 
