@@ -42,7 +42,7 @@ class ServerTest {
 		}
 
 		try {
-			server.update (new Savings("Joe"));
+			server.update (new Savings());
 			System.out.println("***Update nonexistant failed");
 		} catch (IllegalStateException e) {
 			System.out.println("Passed update nonexistant:" + e.getMessage());
