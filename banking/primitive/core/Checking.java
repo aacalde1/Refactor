@@ -1,9 +1,9 @@
 package banking.primitive.core;
 
-import banking.interfaces.Account;
+import banking.interfaces.AAccount;
 
 @SuppressWarnings("serial")
-public class Checking extends Account {
+public class Checking extends AAccount {
 	private int numWithdraws = 0;
 
 	private Checking(String name) {
@@ -24,14 +24,14 @@ public class Checking extends Account {
 	}
 
 	public void deposit(DepositParameter parameterObject) {
-		balance = balance + parameterObject.amount;
+		accountBalance = accountBalance + parameterObject.amount;
 	}
 
 	public void withdraw(float amount) {
-		balance = balance - amount;
+		accountBalance = accountBalance - amount;
 		numWithdraws++;
 		if (numWithdraws > 10)
-			balance = balance - 2;
+			accountBalance = accountBalance - 2;
 	}
 
 	public String toString() {

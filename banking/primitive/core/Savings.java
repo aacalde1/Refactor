@@ -1,11 +1,11 @@
 package banking.primitive.core;
 
-import banking.interfaces.Account;
-import banking.interfaces.InterestBearing;
+import banking.interfaces.AAccount;
+import banking.interfaces.IInterestBearing;
 import banking.primitive.*;
 
 @SuppressWarnings("serial")
-public class Savings extends Account implements InterestBearing {
+public class Savings extends AAccount implements IInterestBearing {
 	private int numWithdraws = 0;
 
 	public Savings(String name) {
@@ -21,18 +21,18 @@ public class Savings extends Account implements InterestBearing {
 	}
 
 	public void deposit(DepositParameter parameterObject) {
-		balance = balance + parameterObject.amount - 0.50F;
+		accountBalance = accountBalance + parameterObject.amount - 0.50F;
 	}
 
 	public void withdraw(float amount) {
-		balance = balance - amount;
+		accountBalance = accountBalance - amount;
 		numWithdraws++;
 		if (numWithdraws > 3)
-			balance = balance - 1;
+			accountBalance = accountBalance - 1;
 	}
 
 	public void accrueInterest() {
-		balance = balance * 1.001F;
+		accountBalance = accountBalance * 1.001F;
 	}
 
 	public String toString() {

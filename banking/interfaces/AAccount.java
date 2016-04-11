@@ -6,28 +6,28 @@ import banking.primitive.core.DepositParameter;
 import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
-public abstract class Account implements Asset
+public abstract class AAccount implements Asset
 {
 	/*
 	 * CST316 ACTIVITY 1.4
 	 */
-	protected float accountBlance =0.0F;
+	protected float accountBalance =0.0F;
 	protected String name;
 
-	public Account(String n)
+	public AAccount(String n)
 	{
 		name = n;
 	}
 
-	public Account(String n, float b)
+	public AAccount(String n, float b)
 	{
 		name = n;
-		accountBlance = b;
+		accountBalance = b;
 	}
 
 	public void display()
 	{
-	    JOptionPane.showMessageDialog(null, "Account " + name + " has $" + accountBlance);
+	    JOptionPane.showMessageDialog(null, "Account " + name + " has $" + accountBalance);
 	}
 
 	public String getName()
@@ -37,13 +37,13 @@ public abstract class Account implements Asset
 
 	public float getBalance()
 	{
-		return accountBlance;
+		return accountBalance;
 	}
 	
 	public abstract void deposit(DepositParameter parameterObject);
 	public abstract void withdraw(float amount);
 
     public String toString() {
-    	return "Account " + name + " has $" + accountBlance +"\n";
+    	return "Account " + name + " has $" + accountBalance +"\n";
     }
 }

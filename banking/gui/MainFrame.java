@@ -1,6 +1,6 @@
 package banking.gui;
 
-import banking.interfaces.Account;
+import banking.interfaces.AAccount;
 import banking.server.AccountServer;
 import banking.server.AccountServerFactory;
 
@@ -81,10 +81,10 @@ class MainFrame extends JFrame {
 
 	class DisplayHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			List<Account> accounts = myServer.getAllAccounts();
+			List<AAccount> accounts = myServer.getAllAccounts();
 			StringBuffer sb = new StringBuffer();
-			Account thisAcct = null;
-			for (Iterator<Account> li = accounts.iterator(); li.hasNext();) {
+			AAccount thisAcct = null;
+			for (Iterator<AAccount> li = accounts.iterator(); li.hasNext();) {
 				thisAcct = li.next();
 				sb.append(thisAcct.toString());
 			}
