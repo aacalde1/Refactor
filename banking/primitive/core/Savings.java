@@ -9,9 +9,11 @@ public class Savings extends AAccount implements IInterestBearing {
 	private int numWithdraws = 0;
 
 	/*
-	 * TASK 2-1 SMELL WITHIN A CLASS <Duplicate Function with savings
+	 * TASK 2-1 SMELL WITHIN A CLASS Duplicate Code 
+	 *
+	 *Duplicate code was here, Deleted.
 	 */
-
+	
 	public Savings(String name, float balance) {
 		super(name, balance);
 	}

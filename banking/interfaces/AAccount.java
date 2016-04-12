@@ -10,14 +10,14 @@ public abstract class AAccount implements IAsset
 	/*
 	 * CST316 ACTIVITY 1.4
 	 */
-	protected float accountBalance =0.0F;
+	protected static float accountBalance =0.0F;
 	protected String name;
 
-	public AAccount(String n)
-	{
-		name = n;
-	}
-
+	/*
+	 * TASK 2-1 SMELL WITHIN A CLASS Duplicate Code 
+	 *
+	 *Duplicate code was here, Deleted.
+	 */
 	public AAccount(String n, float b)
 	{
 		name = n;

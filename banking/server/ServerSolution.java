@@ -22,7 +22,9 @@ class ServerSolution implements IAccountServer {
 
 				Integer sizeI = (Integer) in.readObject();
 				int size = sizeI.intValue();
-				for (int i=0; i < size; i++) {
+				//TASK 2-2 SMELL BETWEEN CLASSES poor name for int i
+				//rename i to counter
+				for (int counter=0; counter < size; counter++) {
 					AAccount acc = (AAccount) in.readObject();
 					accountList.add(acc);
 				}
@@ -77,9 +79,9 @@ class ServerSolution implements IAccountServer {
 
 	public List<AAccount> getOverdrawnAccounts() {
 		List<AAccount> result = new ArrayList<AAccount>();
-
-		for (int i=0; i < accountList.size(); i++) {
-			AAccount acc = accountList.get(i);
+		//TASK 2-2 SMELL BETWEEN CLASSES poor name for int i
+		for (int numberlist=0; numberlist < accountList.size(); numberlist++) {
+			AAccount acc = accountList.get(numberlist);
 			if (acc.getBalance() < 0) {
 				result.add(acc);
 			}
@@ -112,11 +114,13 @@ class ServerSolution implements IAccountServer {
 	}
 
 	protected int findIndex(String name) {
-
-		for (int i=0; i < accountList.size(); i++) {
-			AAccount acc = accountList.get(i);
+		
+		//TASK 2-2 SMELL BETWEEN CLASSES poor name for int i
+		//rename i to indexsize
+		for (int indexsize=0; indexsize < accountList.size(); indexsize++) {
+			AAccount acc = accountList.get(indexsize);
 			if (name.equals(acc.getName())) {
-				return i;
+				return indexsize;
 			}
 		}
 		return -1;

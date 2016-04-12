@@ -6,17 +6,22 @@ import banking.interfaces.AAccount;
 public class Checking extends AAccount {
 	private int numWithdraws = 0;
 
-	private Checking(String name) {
-		super(name);
-	}
-
-    public static Checking createChecking(String name) {
-        return new Checking(name);
-    }
-
+	
+	/*
+	 * TASK 2-1 SMELL WITHIN A CLASS Duplicate Code 
+	 *
+	 *Duplicate code was here, Deleted.
+	 */
+	
 	public Checking(String name, float balance) {
 		super(name, balance);
 	}
+
+    public static Checking createChecking(String name) {
+        return new Checking(name, accountBalance);
+    }
+
+	
 
 	public void display() {
 		System.out.print("Checking ");
